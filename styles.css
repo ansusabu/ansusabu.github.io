@@ -1,0 +1,80 @@
+body {
+    /* Set background image properties */
+    background-color: #00000;/*url('image/meal_plan.jpg'); *//* Replace with the actual path to your image */
+    background-size: cover; /* Adjust based on your preference */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: fixes the background image when scrolling */
+    
+    /* Add additional styles as needed */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Adjust the font family as needed */
+    color: #00000; /* Set text color to be visible on the background */
+}
+
+/* Add more styles for your header, form, and other elements as needed */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: #ffffff;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+}
+/* styles.css */
+
+/* Add borders to the table and cells */
+#mealPlanTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#mealPlanTable th, #mealPlanTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#mealPlanTable th {
+    background-color: #f2f2f2;
+}
+
+/* Add this to your styles.css file */
+/* Style for tabs */
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tabButton {
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 16px;
+}
+
+.tabButton:hover {
+    background-color: #f2f2f2;
+}
+
+.active {
+    background-color: #ddd;
+}
+
+/* Style for tab content */
+.tabContent {
+    display: none;
+}
+
