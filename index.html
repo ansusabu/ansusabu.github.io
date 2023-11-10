@@ -1,7 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planning App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <h1>Meal Planning and Grocery Shopping</h1>
+    </header>
+
+    <main>
+        <!-- Tabs Navigation -->
+        <div class="tabs">
+            <button class="tabButton active" data-tab="mealPlanTab" onclick="openTab('mealPlanTab')">Meal Plan</button>
+            <button class="tabButton" data-tab="recipeTab" onclick="openTab('recipeTab')">Recipe</button>
+            <button class="tabButton" data-tab="settingsTab" onclick="openTab('settingsTab')">Shopping List</button>
+        </div>
+
+        <!-- Meal Plan Tab -->
+        <div id="mealPlanTab" class="tabContent">
+            <form id="userPreferencesForm">
+                <label for="mealPreferences">Meal Preferences:</label>
+                <select name="mealPreferences" id="mealPreferences" required>
+                    <option value="volvo">South Indian</option>
+                </select>
+                <button type="button" id="generateButton" onclick="generateMealPlan()">Generate Meal Plan</button>
+            </form>
+
+            <table id="mealPlanTable">
+                <tbody id="mealPlanBody">
+                    <!-- The meal plan will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Recipe Tab -->
+        <div id="recipeTab" class="tabContent">
+            <h2>Ragi Puttu with Banana</h2>
+			Ingredients:
+1 cup ragi (finger millet) flour
+1/2 cup grated coconut
+A pinch of salt
+Water, as needed
+1 ripe banana, sliced (for serving)
+Instructions:
+Prepare the Ragi Flour:
+
+If you have store-bought ragi flour, you can use it directly. If not, roast ragi flour in a pan over low heat for a few minutes until you get a nice aroma. Allow it to cool.
+Make Puttu Mixture:
+
+In a mixing bowl, combine the ragi flour, grated coconut, and a pinch of salt.
+Gradually add water little by little and mix the flour with your fingers until the mixture resembles breadcrumbs. Ensure that the mixture is slightly damp, not too wet.
+Layering in Puttu Maker:
+
+In a puttu maker or steamer, layer the bottom with grated coconut.
+Add the ragi mixture on top of the coconut layer.
+Steam the Puttu:
+
+Steam the mixture in the puttu maker or steamer for about 10-15 minutes or until the ragi is cooked and has a fluffy texture.
+Serve:
+
+Once done, remove the puttu from the mold and let it cool slightly.
+Serve the ragi puttu warm, layered with sliced ripe banana.
+            <p id="recipeContent"></p>
+        </div>
+
+        <!-- Settings Tab -->
+        <div id="settingsTab" class="tabContent">
+            <h2>Staples:</h2>Ragi flour<br />Rice flour<br />Wheat flour<br />Semolina (Rava)<br />All-purpose flour<br />Black chickpeas (kadala for kadala curry)<br />Lentils (for sambar)<br />Urad dal (for dosa and idli batter)<br />Toor dal (for sambar)<br />Rice (for idli, appam, rice dishes)<br />Wheat (for chappathi, wheat dosa, wheat puttu)<br />Coconut (fresh or desiccated)<h2>Vegetables:</h2>Onions<br />Tomatoes<br />Potatoes<br />Carrots<br />Beans<br />Capsicum<br />Cabbage<br />Drumsticks<br />Plantains (for serving with puttu)<br />Bananas (for serving with ragi puttu)<br />Pumpkin<br />Snake gourd (for Olan)<br />Yam (for Erissery)<br />Ash gourd (for Kuttu curry)<br />Pineapple<br />Drumstick leaves (for Aviyal)<br />Mixed vegetables (for Vegetable Stew and Thoran)<br />Beetroot (for Thoran)<br />Cucumber (for curd rice)<br />Lemon<h2>Spices and Seasonings:</h2>Mustard seeds<br />Cumin seeds<br />Fenugreek seeds<br />Curry leaves<br />Red chili powder<br />Turmeric powder<br />Coriander powder<br />Garam masala<br />Fennel seeds<br />Cardamom<br />Cinnamon<br />Cloves<h2>Herbs:</h2>Coriander leaves<br />Mint leaves<h2>Proteins:</h2>Eggs<br />Chicken<br />Fish<br />Urad dal (for dosa and idli batter)<br />Mutton<br />Paneer<br />Mushrooms<br />Beef<h2>Dairy:</h2>Ghee<br />Butter<br />Curd<br />Milk<br />Paneer<h2>Other:</h2>Baking soda (for idli batter)<br />Oil (cooking oil and coconut oil)<br />Yeast (for vattayappam)<br />Sugar<br />Salt
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
